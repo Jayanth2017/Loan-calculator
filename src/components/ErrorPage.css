@@ -1,0 +1,31 @@
+/* src/components/ErrorPage.css */
+
+.error-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh; /* Adjust as needed for vertical centering */
+  text-align: center;
+}
+
+.error-page-container h1 {
+  color: #dc3545; /* Red color for error message */
+  margin-bottom: 20px;
+}
+
+.go-home-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.go-home-button:hover {
+  background-color: #ebb757;
+}

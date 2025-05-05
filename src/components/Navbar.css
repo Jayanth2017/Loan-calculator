@@ -1,0 +1,178 @@
+/* src/components/Navbar.css */
+
+.navbar {
+  background-color: #f1d576; /* Example blue color */
+  color: rgb(14, 13, 13);
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.navbar-toggle {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: none; /* Hide by default on larger screens */
+  padding: 10px;
+}
+
+.icon-bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px auto;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center; /* Vertically align items in the nav */
+}
+
+.nav-item {
+  margin-left: 20px;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Slight white overlay on hover */
+}
+
+.nav-link.active {
+  background-color: rgba(255, 255, 255, 0.2); /* More prominent background for active link */
+}
+
+.navbar-toggle-switch {
+  margin-left: 20px;
+}
+
+/* Theme Switch Styles */
+.theme-switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+.theme-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 20px; /* Make it round */
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%; /* Make the circle round */
+}
+
+input:checked + .slider {
+  background-color: #a7ed89; /* Light green when dark mode is on (in light theme) */
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #a7ed89;
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px); /* Move the circle to the right */
+}
+
+/* Dark mode specific styles for the slider */
+.navbar.dark .theme-switch .slider {
+  background-color: #4a4a4a; /* Darker background in dark mode */
+}
+
+.navbar.dark .theme-switch input:checked + .slider {
+  background-color: #ffd000; /* Blue when light mode is on (toggled in dark theme) */
+}
+
+.navbar.dark .theme-switch .slider:before {
+  background-color: #eee; /* Lighter circle in dark mode */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar-menu {
+    display: none; /* Hide menu on smaller screens */
+    position: absolute;
+    top: 60px; /* Adjust based on navbar height */
+    left: 0;
+    width: 100%;
+    background-color: #eef85a;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+  }
+
+  .navbar-menu.open {
+    display: flex; /* Show menu when 'open' class is added */
+  }
+
+  .navbar-toggle {
+    display: block; /* Show toggle button on smaller screens */
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-item {
+    margin-left: 0;
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .nav-link {
+    padding: 15px 20px;
+    display: block;
+  }
+
+  .navbar-toggle-switch {
+    margin-left: 0;
+    margin-top: 15px;
+  }
+}

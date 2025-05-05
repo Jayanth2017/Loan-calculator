@@ -1,0 +1,260 @@
+/* src/components/LoanCalculator.css (Responsive) */
+
+.loan-calculator-dashboard {
+    padding: 15px; /* Slightly less padding on smaller screens */
+    
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  
+  
+  
+  .loan-form {
+    display: grid;
+    grid-template-columns: auto; /* Stack inputs in a single column */
+    gap: 10px;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: white;
+    width: 50%; /* Set a specific width for the box */
+    margin-left: auto; /* Center horizontally */
+    margin-right: auto; /* Center horizontally */
+  }
+  
+  @media (min-width: 768px) {
+    .loan-form {
+      grid-template-columns: auto auto; /* Two columns on larger screens */
+      gap: 15px 20px;
+      padding: 15px;
+    }
+  
+    .loan-form button[type="submit"] {
+      grid-column: 1 / span 2; /* Still span both columns on larger screens */
+    }
+  }
+  
+  .loan-form div {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .loan-form label {
+    margin-bottom: 3px; /* Less margin on smaller screens */
+    font-weight: bold;
+    color: #333;
+    font-size: 0.9em; /* Slightly smaller font size */
+  }
+  
+  .loan-form input[type="number"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 1em;
+  }
+  
+  .loan-form button[type="submit"] {
+    padding: 10px 15px; /* Slightly less padding on smaller screens */
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+  }
+  
+  .loan-form button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  .monthly-payment {
+    background-color: #e9ecef;
+    padding: 12px; /* Slightly less padding on smaller screens */
+    border-radius: 5px;
+    margin-top: 15px; /* Less margin on smaller screens */
+    margin-bottom: 15px; /* Less margin on smaller screens */
+    font-size: 1.1em; /* Slightly smaller font size */
+    font-weight: bold;
+    text-align: center;
+    color: #28a745;
+  }
+  
+  .amortization-table-container {
+    margin-top: 15px; /* Less margin on smaller screens */
+    overflow-x: auto;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .amortization-table-container h2 {
+    padding: 12px; /* Slightly less padding on smaller screens */
+    margin-bottom: 0;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    color: #333;
+    text-align: left;
+    font-size: 1.2em; /* Slightly smaller font size */
+  }
+  
+  .amortization-table-container table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9em; /* Slightly smaller font size */
+  }
+  
+  .amortization-table-container th,
+  .amortization-table-container td {
+    padding: 8px 10px; /* Less padding on smaller screens */
+    border-bottom: 1px solid #eee;
+    text-align: left;
+  }
+  
+  .amortization-table-container th {
+    background-color: #e9ecef;
+    font-weight: bold;
+    color: #495057;
+  }
+  
+  .amortization-table-container tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .reset-table-button {
+    background-color: #dc3545;
+    color: white;
+    padding: 10px 12px; /* Slightly less padding on smaller screens */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em; /* Slightly smaller font size */
+    transition: background-color 0.3s ease;
+    margin-top: 15px; /* Less margin on smaller screens */
+  }
+  
+  .reset-table-button:hover {
+    background-color: #c82333;
+  }
+  /* src/components/LoanCalculator.css */
+
+/* ... other styles ... */
+
+.amortization-table-container {
+    margin-top: 20px;
+    overflow-x: auto; /* Keep horizontal scroll for wide tables */
+    overflow-y: auto; /* Add vertical scroll if content exceeds max-height */
+    max-height: 300px; /* Adjust this value as needed */
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .amortization-table-container h2 {
+    padding: 15px;
+    margin-bottom: 0;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    color: #333;
+    text-align: left;
+  }
+  
+  .amortization-table-container table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .amortization-table-container th,
+  .amortization-table-container td {
+    padding: 10px 15px;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+  }
+  
+  .amortization-table-container th {
+    background-color: #e9ecef;
+    font-weight: bold;
+    color: #495057;
+    position: sticky; /* Make header stick to the top during scroll */
+    top: 0;
+    z-index: 1; /* Ensure it's above the table body */
+  }
+  
+  .amortization-table-container tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+ /* src/components/LoanCalculator.css */
+
+/* ... other styles ... */
+
+.loan-form {
+    display: flex;
+    flex-direction: column; /* Arrange items in a single column */
+    gap: 15px; /* Spacing between the elements */
+    margin-bottom: 15px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: white;
+    align-items: center; /* Center items horizontally */
+  }
+  
+  .loan-form div {
+    display: flex;
+    flex-direction: column;
+    width: 80%; /* Adjust width as needed */
+    max-width: 400px; /* Optional: set a maximum width */
+  }
+  
+  .loan-form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+    font-size: 0.9em;
+    text-align: left; /* Align labels to the left within their container */
+  }
+  
+  .loan-form input[type="number"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 1em;
+  }
+  
+  .loan-form button[type="submit"] {
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+    width: 80%; /* Make the button the same width as the inputs */
+    max-width: 400px; /* Optional: match the max width of inputs */
+  }
+  
+  .loan-form button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  /* ... other styles ... */
+  
+  /* Responsive adjustments (modify if needed for single column) */
+  @media (min-width: 768px) {
+    .loan-form {
+      /* You can remove or modify these if you want to keep the single column on larger screens */
+      /* grid-template-columns: auto auto;
+      gap: 15px 20px;
+      padding: 15px; */
+    }
+  
+    .loan-form button[type="submit"] {
+      /* grid-column: 1 / span 2; */ /* Not needed in single column */
+    }
+  }

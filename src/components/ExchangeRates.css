@@ -1,0 +1,65 @@
+/* src/components/ExchangeRates.css */
+
+.exchange-rates-container {
+    padding: 20px;
+  }
+  
+  .exchange-rates-container h2 {
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .exchange-rates-container table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+  }
+  
+  .exchange-rates-container th,
+  .exchange-rates-container td {
+    padding: 10px 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .exchange-rates-container th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+  }
+  
+  .exchange-rates-container tbody tr:nth-child(even) {
+    
+  }
+  
+  .exchange-rates-container tbody tr:hover {
+    
+  }/* src/components/ExchangeRates.css */
+
+/* ... existing styles ... */
+
+.pagination-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    gap: 15px;
+  }
+  
+  .pagination-controls label {
+    font-weight: bold;
+  }
+  
+  .pagination-controls select,
+  .pagination-controls button {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .pagination-controls button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
