@@ -12,7 +12,7 @@ function Navbar() {
     document.body.className = storedTheme;
     return storedTheme;
   });
-  const githubRepoURL = 'YOUR_GITHUB_REPOSITORY_URL';
+  const githubRepoURL = 'https://github.com/Jayanth2017/Loan-calculator.git';
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
