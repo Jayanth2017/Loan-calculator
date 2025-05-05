@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import LoanCalculatorDashboard from './components/LoanCalculatorDashboard'; // <--- Check import
 import ExchangeRates from './components/ExchangeRates';         // <--- Check import

@@ -1,4 +1,4 @@
-import React, { useState, useEffect ,useContext} from 'react';
+import React, { useState} from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 
@@ -12,7 +12,7 @@ function Navbar() {
     document.body.className = storedTheme;
     return storedTheme;
   });
-  const githubRepoURL = 'YOUR_GITHUB_REPOSITORY_URL';
+  const githubRepoURL = 'https://github.com/Jayanth2017/Loan-calculator';
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
